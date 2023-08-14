@@ -12,7 +12,13 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+.fuente-especial {
+  font-family: 'Playfair Display', serif;
+}
 
+.fuente-especial-portada {
+  font-family: 'Tilt Prism', cursive;
+}
 .header {
   position: fixed;
   top: 0;
@@ -37,6 +43,47 @@ body {
 .nav-list li {
   margin-right: 20px;
 }
+.main-nav {
+  background-color: #333;
+  color: #fff;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  list-style-type: none;
+  padding: 10px;
+}
+
+.dropdown-menu li {
+  margin: 5px 0;
+}
+
+.dropdown-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 .nav-list li a {
   text-decoration: none;
@@ -66,6 +113,7 @@ section {
   color: #fff;
 }
 
+
 section h1 {
   text-align: center;
   font-size: 4rem;
@@ -73,7 +121,7 @@ section h1 {
 }
 
 .no-parallax {
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(139, 139, 139);
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -84,7 +132,7 @@ section h1 {
 }
 
 .no-parallax-article {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(73, 73, 73);
   z-index: 999;
   display: flex;
   overflow: hidden;
@@ -101,7 +149,7 @@ section h1 {
 
 .no-parallax-img {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./img/extorsion.jpg");
+  url("./img/extorsion.jpg");
   z-index: 999;
 }
 
@@ -177,19 +225,41 @@ section h1 {
 }
 .section1::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./img/Sextorsión\,\ una\ nueva\ modalidad\ de\ extorsión\ en\ aumento.jpg");
+  url("./img/noche.jpg");
   background-size: cover;
 }
 
 .section2::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./img/Homebuyer\ beware_\ FTC\,\ Realtors\ issue\ warning\ on\ mortgage\ closing\ cost\ phishing\ scheme.jpg");
+    url("./img/perro.jpg");
   background-size: cover;
 }
 
 .section3::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./img/extorsion.jpg");
+    url("./img/ninios.jpg");
+  background-size: cover;
+}
+
+.section4::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./img/reunion.jpg");
+  background-size: cover;
+}
+
+.section5::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("./img/amigas.jpg");
+  background-size: cover;
+}
+.section6::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("./img/Homebuyer\ beware_\ FTC\,\ Realtors\ issue\ warning\ on\ mortgage\ closing\ cost\ phishing\ scheme.jpg");
+  background-size: cover;
+}
+.sectionMain::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./img/noche.jpg");
   background-size: cover;
 }
 
@@ -197,15 +267,15 @@ section h1 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./img/fondo_enlaces.jpg");
   background-size: cover;
-  text-align: center; /* Alinea el contenido al centro */
-  padding: 50px 0; /* Espaciado alrededor del contenido */
+  text-align: center; 
+  padding: 50px 0;
 }
 
 .link-list {
   list-style-type: none;
-  display: flex; /* Mostrar los elementos en una fila */
-  justify-content: center; /* Centrar horizontalmente los elementos */
-  align-items: center; /* Centrar verticalmente los elementos */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
   padding: 0;
   margin: 0;
 }
@@ -237,10 +307,6 @@ section h1 {
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 5px;
-}
-
-.link-list img:hover {
-  transform: scale(1.1);
 }
 
 .link-list img:hover {
@@ -279,14 +345,17 @@ section h1 {
 }
 
 .gallery-link img {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 
 .gallery-link:hover {
   transform: scale(1.1);
 }
-
+.small-image-gallery {
+  width: 60%; 
+  height: auto;
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -352,6 +421,20 @@ section h1 {
   align-items: center;
   margin: -10px;
 }
+.flex-container-text{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.flex-left-text{
+  flex: 0 1 1000px;
+  font-size: 32px;
+}
+.flex-main-text{
+  flex: 0 1 1000px;
+  font-size: 32px;
+}
 
 .flex-left,
 .flex-right {
@@ -360,6 +443,8 @@ section h1 {
   margin: 10px;
   border: 2px solid #ccc;
   box-sizing: border-box;
+  max-width: auto;
+  height: auto;
 }
 
 .flex-right h2 {
@@ -367,8 +452,8 @@ section h1 {
   margin-bottom: 10px;
 }
 .flex-right audio {
-  margin-top: 20px; /* Añado margen superior al audio para separarlo de la imagen */
-  width: 100%; /* Hago que el audio ocupe el 100% del ancho disponible */
+  margin-top: 20px; 
+  width: 100%;
 }
 
 .flex-right audio::-webkit-media-controls-panel {
@@ -377,17 +462,28 @@ section h1 {
 }
 
 .flex-right audio::-webkit-media-controls-timeline {
-  flex: 1; /* Hace que la barra de reproducción ocupe el espacio disponible */
+  flex: 1; 
 }
 .flex-right img,
 .flex-left img {
-  max-width: 100%; /* Establece un tamaño máximo del 100% del ancho disponible */
-  height: auto; /* Mantiene la proporción de aspecto de la imagen */
-  display: block; /* Elimina el espacio en blanco debajo de las imágenes */
-  margin: 0 auto; /* Centra horizontalmente las imágenes */
+  max-width: 100%; 
+  height: auto; 
+  display: block;
+  margin: 0 auto; 
+}
+.flex-left .descripcion {
+  font-size: 30px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-top: 20px;
 }
 
 /* Estilo para las imágenes dentro de .flex-right */
 .flex-right img {
   margin-top: 20px; /* Añade margen superior para separarla del audio */
+}
+
+.small-image {
+  width: 50%; /* Reducir el ancho a la mitad */
+  height: auto; /* Mantener la proporción de aspecto */
 }
