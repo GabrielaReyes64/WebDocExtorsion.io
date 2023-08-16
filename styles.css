@@ -1,7 +1,6 @@
 *,
 *::before,
 *::after {
-  transform: scale(0.98);
   box-sizing: border-box;
 }
 
